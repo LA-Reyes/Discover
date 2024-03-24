@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    /*padding: 0;*/
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #ff3700;
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    background: #ffffff;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    width: 80%;
+    margin: auto;
+}
+
+.text { 
+    position: relative;
+    padding-left: 0px;
+    text-align: center;
+    left: 100px;
+    transform: translateX(-50%);
+}
+
+.PHINMA {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+.UPANG {
+    font-size: 25px; 
+    text-align: center;
+}
+
+.MAIN {
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-logo {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    background-color: rgba(249, 249, 249, 0.651);
+    width: 100%; 
+    height: auto; 
+    z-index: 1;
+    top: 163px;
+    left: -0px;
+}
+  
+.dropdown-menu.active {
+    display: block;
+    transform: translateX(0); /* Move the menu back to its original position when active */
+}
+  
+.dropdown-menu ul {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding-left: 400px;
+    padding-right: 400px;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+  
+.dropdown-menu a {
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    width: 100%;
+}
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.hamburger.active.bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active.bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active.bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-link:hover{
+    color: #374922;
+}
+
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('img/image1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+}   
+
+banner::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.content{
+    position: relative;
+    min-width: 500px;
+    min-height: 380px;
+    display: none;
+    transform: scale(0);
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);  
+    border-radius: 10px;
+}
+
+.content.active{
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.banner h1{
+    color: white;
+}
+
+.banner .p{
+    color: white;
+}
+
+
+.banner .carousel-box {
+    position: absolute; 
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%); 
+    min-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner .carousel-box .carousel img{
+    border-radius: 20px;
+}
+
+.carousel{
+    position: relative;
+    height: 550px;
+    perspective: 1500px;
+}
+
+.carousel .carousel-item{
+    width: 250px;
+    cursor: grab;
+}
+
+.carousel .carousel-item img{
+    width: 235px;
+    border-radius: 10px;
+    transform: translateX(8px) translateY(-100px);
+    object-fit: cover;
+    object-position: center;
+}

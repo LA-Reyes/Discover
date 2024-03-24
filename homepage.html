@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upang Topography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo" ><img src="UpangLogo.png" width="125px" height="125px" /></a>
+            <div class="text">
+                <p class="PHINMA">PHINMA</p>
+                <p class="UPANG">University of Pangasinan</p>
+                <p class="MAIN">Main Campus</p>
+            </div>
+
+
+            <div id="dropdown" class="dropdown-menu">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Discover</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="content active">
+            <h1>PTC Building</h1>
+            <p>Lorem Ipsum Dolor</p>
+        </div>
+
+        <div class="content">
+            <img src="img/image2.jpg">
+            <h1>CAHS Building</h1>
+            <p>Lorem Ipsum Dolor</p>
+        </div>
+
+
+        <div class="content">
+            <img src="img/image3.jpg">
+            <h1>NH Building</h1>
+            <p>Lorem Ipsum Dolor</p>
+        </div>
+
+
+        <div class="content">
+            <h1>CMA Building</h1>
+            <p>Lorem Ipsum Dolor</p>
+        </div>
+
+        <div class="content">
+            <h1>MBA Building</h1>
+            <p>Lorem Ipsum Dolor</p>
+        </div>
+
+
+        <div class="carousel-box">
+            <div class="carousel">
+                <div class="carousel-item" onClick="changeBg('image1.jpg', 'image1')">
+                    <img src="img/image1.jpg" alt="#">
+                </div>
+                <div class="carousel-item" onClick="changeBg('image2.jpg', 'image2')" >
+                    <img src="img/image2.jpg" alt="#">
+                </div>
+                <div class="carousel-item" onClick="changeBg('image3.jpg', 'image3')">
+                    <img src="img/image3.jpg" alt="#">
+                </div>
+                <div class="carousel-item" onClick="changeBg('image4.jpg', 'image4')">
+                    <img src="img/image4.jpg" alt="#">
+                </div>
+                <div class="carousel-item" onClick="changeBg('image5.jpg', 'image5')">
+                    <img src="img/image5.jpg" alt="#">
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
